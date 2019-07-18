@@ -1,0 +1,7 @@
+apiVersion: catalog.orb.dev/v1alpha1
+kind: AddressableService
+metadata:
+  name: make-it-addressable
+  namespace: orb-catalog
+spec:
+  serviceName: webhook
