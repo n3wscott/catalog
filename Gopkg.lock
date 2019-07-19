@@ -240,6 +240,14 @@
   version = "v0.2.0"
 
 [[projects]]
+  digest = "1:3c8c26bb118e3f02230d4f5f30b972dbfe0c6b371acea8f190aa99ceaaae7028"
+  name = "github.com/gorilla/mux"
+  packages = ["."]
+  pruneopts = "NUT"
+  revision = "00bdffe0f3c77e27d2cf6f5c70232a2d3e4d9c15"
+  version = "v1.7.3"
+
+[[projects]]
   branch = "master"
   digest = "1:a86d65bc23eea505cd9139178e4d889733928fe165c7a008f41eaab039edf9df"
   name = "github.com/gregjones/httpcache"
@@ -359,16 +367,36 @@
   version = "v3.0.0"
 
 [[projects]]
-  digest = "1:09fd8d3e830bac0a0e2d1f7009fe33a0c435ee14ae818be9cc9ceb5f77da18ae"
+  digest = "1:e848ce7c0b0d50ca35291ac8cfd9ed444f8151c39683cbe23b50c82940e7877f"
+  name = "github.com/pmorie/go-open-service-broker-client"
+  packages = ["v2"]
+  pruneopts = "NUT"
+  revision = "79b374a2302fe4a2c05c6f469262d195b765152f"
+  version = "0.0.12"
+
+[[projects]]
+  branch = "master"
+  digest = "1:1c4ac7153ef289026620c5e15a437ab3918ff1db0fce4d6a0176a5603259c41c"
+  name = "github.com/pmorie/osb-broker-lib"
+  packages = [
+    "pkg/broker",
+    "pkg/metrics",
+    "pkg/rest",
+    "pkg/server",
+  ]
+  pruneopts = "NUT"
+  revision = "87d71cfbf3427836e5623f1e3843a466348b7be6"
+
+[[projects]]
+  digest = "1:03bca087b180bf24c4f9060775f137775550a0834e18f0bca0520a868679dbd7"
   name = "github.com/prometheus/client_golang"
   packages = [
     "prometheus",
-    "prometheus/internal",
     "prometheus/promhttp",
   ]
   pruneopts = "NUT"
-  revision = "50c4339db732beb2165735d2cde0bff78eb3c5a5"
-  version = "v0.9.3"
+  revision = "c5b7fccd204277076155f10851dad72b76a49317"
+  version = "v0.8.0"
 
 [[projects]]
   branch = "master"
@@ -1040,7 +1068,13 @@
   input-imports = [
     "github.com/knative/test-infra/scripts",
     "github.com/knative/test-infra/tools/dep-collector",
+    "github.com/pmorie/go-open-service-broker-client/v2",
+    "github.com/pmorie/osb-broker-lib/pkg/broker",
+    "github.com/pmorie/osb-broker-lib/pkg/metrics",
+    "github.com/pmorie/osb-broker-lib/pkg/rest",
+    "github.com/pmorie/osb-broker-lib/pkg/server",
     "go.uber.org/zap",
+    "gopkg.in/yaml.v2",
     "k8s.io/api/core/v1",
     "k8s.io/apimachinery/pkg/api/equality",
     "k8s.io/apimachinery/pkg/api/errors",

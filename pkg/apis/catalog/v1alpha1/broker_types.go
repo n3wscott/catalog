@@ -50,6 +50,9 @@ var _ kmeta.OwnerRefable = (*Broker)(nil)
 
 // BrokerSpec holds the desired state of the Broker (from the client).
 type BrokerSpec struct {
+	// URL is the address used to communicate with the Open Service Broker.
+	URL *apis.URL `json:"url,omitempty"`
+
 	// ServiceName holds the name of the Kubernetes Service to expose as an "addressable".
 	ServiceName string `json:"serviceName"`
 }
@@ -63,6 +66,10 @@ const (
 // BrokerStatus communicates the observed state of the Broker (from the controller).
 type BrokerStatus struct {
 	duckv1beta1.Status `json:",inline"`
+
+	// LastSyncTime is the last time the service catalog has been listed.
+	// +optional
+	LastSyncTime apis.VolatileTime `json:"lastSyncTime,omitempty" description:"Last time the service catalog has been listed."`
 
 	// Address holds the information needed to connect this Addressable up to receive events.
 	// +optional
