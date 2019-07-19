@@ -772,6 +772,14 @@
   version = "kubernetes-1.12.6"
 
 [[projects]]
+  branch = "master"
+  digest = "1:aa884a2751113d0c2f49e80f46037ee8dcb12122ddee42494365bfaa9037fb8b"
+  name = "k8s.io/apiextensions-apiserver"
+  packages = ["pkg/apis/apiextensions"]
+  pruneopts = "NUT"
+  revision = "2249b0201a0a644d35c5f33f72c3d9db5c2ef463"
+
+[[projects]]
   digest = "1:4e4a489c1c18d52da1d74b94c844276578809fc511f863a08cc7bff7c45b28ed"
   name = "k8s.io/apimachinery"
   packages = [
@@ -1066,6 +1074,8 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/golang/glog",
+    "github.com/gorilla/mux",
     "github.com/knative/test-infra/scripts",
     "github.com/knative/test-infra/tools/dep-collector",
     "github.com/pmorie/go-open-service-broker-client/v2",
@@ -1073,9 +1083,10 @@
     "github.com/pmorie/osb-broker-lib/pkg/metrics",
     "github.com/pmorie/osb-broker-lib/pkg/rest",
     "github.com/pmorie/osb-broker-lib/pkg/server",
+    "github.com/prometheus/client_golang/prometheus",
     "go.uber.org/zap",
-    "gopkg.in/yaml.v2",
     "k8s.io/api/core/v1",
+    "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions",
     "k8s.io/apimachinery/pkg/api/equality",
     "k8s.io/apimachinery/pkg/api/errors",
     "k8s.io/apimachinery/pkg/apis/meta/v1",
